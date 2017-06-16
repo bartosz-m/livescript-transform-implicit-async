@@ -1,0 +1,16 @@
+{
+  "name": "@ehelon/livescript-transform-implicit-async",
+  "version": "0.0.1",
+  "description": "Detects uses of await and automaticaly transform function into async variant.",
+  "main": "lib/index.js",
+  "scripts": {
+    "preinstall": "linklocal -r && linklocal list -r | bulk -c 'npm install --production'",
+    "build": "node_modules/.bin/lsc -cbo lib src"
+  },
+  "devDependencies": {
+    "livescript-async": "^1.5.2"
+  },
+  "author": "Bartosz Matuszewski",
+  "private": true,
+  "license": "UNLICENSED"
+}
