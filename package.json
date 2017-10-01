@@ -4,6 +4,7 @@
   "description": "Detects uses of await and automatically transform function into async variant.",
   "main": "lib/index.js",
   "scripts": {
+    "prepublishOnly": "npm run build && npm run test",
     "build": "node_modules/.bin/lsc dev/build",
     "develop": "node_modules/.bin/lsc dev/watch",
     "test": "node ./test"
