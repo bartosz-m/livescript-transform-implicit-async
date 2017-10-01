@@ -17,7 +17,7 @@ foo-bar = -> "#{await foo} #{await bar}"
 
 installing inside custom livescript implementation
 ```livescript
-require! <[ livescript livescript-transform-implicit-async/plugin]>
+require! <[ livescript livescript-transform-implicit-async/lib/plugin]>
 plugin.install livescript
 livescript.compile source-code
 ```
