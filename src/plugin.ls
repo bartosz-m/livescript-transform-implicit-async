@@ -33,4 +33,4 @@ Plugin = Object.create livescript-ast-transform
             original.apply @, args
 
     ..disable = !->
-        @livescript.Fun::compile = @original-compile
+        @livescript.ast.Fun::compile = @original-compile
