@@ -1,5 +1,5 @@
 {
-  "name": "@ehelon/livescript-transform-implicit-async",
+  "name": "livescript-transform-implicit-async",
   "version": "0.1.0",
   "description": "Detects uses of await and automatically transform function into async variant.",
   "main": "lib/index.js",
