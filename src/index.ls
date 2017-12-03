@@ -1,1 +1,1 @@
-require \./plugin .install!
+export { import \./** }

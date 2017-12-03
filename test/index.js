@@ -1,3 +1,3 @@
 require ('livescript')
-require ('../src')
+require ('../lib/register')
 require ('./simple')
