@@ -2,17 +2,21 @@
   "name": "livescript-transform-implicit-async",
   "version": "0.1.7",
   "description": "Detects uses of await and automatically transform function into async variant.",
-  "main": "lib/index.js",
+  "main": "lib/plugin.js",
   "scripts": {
     "prepublishOnly": "npm run build && npm run test",
-    "build": "node_modules/.bin/lsc dev/build",
+    "build": "node -r livescript-transform-esm/register/cjs ./dev/build",
     "develop": "node_modules/.bin/lsc dev/watch",
     "test": "node ./test"
   },
   "devDependencies": {
     "chokidar": "^1.7.0",
     "fs-extra": "^4.0.2",
-    "livescript": "git+https://github.com/gkz/LiveScript.git"
+    "livescript": "git+https://github.com/gkz/LiveScript.git",
+    "livescript-compiler": "0.0.27",
+    "livescript-system": "0.0.2",
+    "livescript-transform-esm": "^2.8.20",
+    "livescript-transform-object-create": "^1.0.3"
   },
   "homepage": "https://gitlab.com/livescript-ide/livescript-plugins/transform-implicit-async",
   "repository": {
