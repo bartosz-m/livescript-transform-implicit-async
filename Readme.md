@@ -9,17 +9,10 @@ Assuming you have file name app.ls
 
 simple use  
 ```livescript
-require! <[ livescript livescript-transform-implicit-async]>
+require! <[ livescript livescript-transform-implicit-async/register]>
 foo = Promise.resolve \foo
 bar = Promise.resolve \bar
 foo-bar = -> "#{await foo} #{await bar}"
-```
-
-installing inside custom livescript implementation
-```livescript
-require! <[ livescript livescript-transform-implicit-async/lib/plugin]>
-plugin.install livescript
-livescript.compile source-code
 ```
 
 ## CLI
@@ -34,12 +27,12 @@ But don't say I didn't warn you!
 
 compiling
 
-    lsc -cr livescript-transform-implicit-async app.ls
+    lsc -cr livescript-transform-implicit-async/register app.ls
 
 
 running
 
-    lsc -r livescript-transform-implicit-async app.ls
+    node -r livescript-transform-implicit-async/register app.ls
 
 
 # License
