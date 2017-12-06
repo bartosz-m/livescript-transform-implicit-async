@@ -1,5 +1,5 @@
 import
-    \livescript-compiler/lib/livescript/Plugin
+    \livescript-compiler/lib/livescript/Plugin    
 
 
 is-async-function = (function-node) ->

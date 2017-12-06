@@ -25,6 +25,7 @@
   "author": "Bartosz Matuszewski",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "js-nodes": "0.0.1",
     "livescript-compiler": "0.0.31"
   }
 }
