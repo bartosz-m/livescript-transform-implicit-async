@@ -1,6 +1,6 @@
 {
   "name": "livescript-transform-implicit-async",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Detects uses of await and automatically transform function into async variant.",
   "main": "lib/plugin.js",
   "scripts": {
