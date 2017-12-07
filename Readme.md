@@ -1,6 +1,6 @@
-Transform plugin for [livescript](https://github.com/gkz/LiveScript)
+Transform plugin for [livescript](https://github.com/gkz/LiveScript) that detects uses of await and automatically transforms function into async variant.
 
-Detects uses of await and automatically transforms function into async variant.
+**Repository** on [github](https://github.com/bartosz-m/livescript-transform-implicit-asyncu)
 
 input
 ```livescript
@@ -28,9 +28,12 @@ fooBar = async function(){
 ```
 
 
-# Usage
+# Installation
+    
+    npm i -D livescript-transform-implicit-async
 
-Assuming you have file name app.ls
+
+# Usage
 
 simple use  
 ```livescript
@@ -39,6 +42,11 @@ foo = Promise.resolve \foo
 bar = Promise.resolve \bar
 foo-bar = -> "#{await foo} #{await bar}"
 ```
+
+and in simple use in js file
+```js
+require ('livescript-transform-implicit-async/register')
+require ('main') // this is livescript file
 
 ## CLI
 Please stop using cli for any serious task, write scripts in **real** languages (there are so many to choose) e.g.  
@@ -60,7 +68,9 @@ running
     node -r livescript-transform-implicit-async/register app.ls
 
 
-# Atom integration
+# Integration
+
+## Atom 
 
 If you are using Atom editor you may be interested in my packages which provide realtime code preview supporting this plugin. 
 
@@ -71,7 +81,7 @@ If you are using Atom editor you may be interested in my packages which provide 
 ![](https://github.com/bartosz-m/livescript-ide-preview/raw/master/doc/assets/screenshot-01.gif)
 
 
-# Webpack loader
+## Webpack loader
 
 If you are using Webpack you can try my [loader](https://www.npmjs.com/package/livescript-plugin-loader) whith support for this and other plugins.
 
